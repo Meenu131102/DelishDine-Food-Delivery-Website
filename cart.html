@@ -62,6 +62,11 @@
         .empty-cart-message {
             display: none;
         }
+
+        .order-now {
+            display: none;
+            margin-top: 20px;
+        }
     </style>
 </head>
 
@@ -82,13 +87,13 @@
                         <a class="nav-link" href="menu.html">Menu</a>
                     </li>
                     <li class="nav-item mr-3">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="about.html">About Us</a>
                     </li>
                     <li class="nav-item mr-3">
                         <a class="nav-link" href="signin.html">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="wishlist.html"><i class="fa-solid fa-heart"></i></a>
+                        <a class="nav-link" href="contact.html">Contact Us</a>
                     </li>
                     <li class="nav-item ml-1">
                         <a class="nav-link" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
@@ -122,19 +127,25 @@
             <div id="cartItems" class="row">
                 <!-- Cart items will be dynamically added here -->
             </div>
+            <div class="order-now text-center">
+                <a href="order.html" class="btn btn-warning">Order Now</a>
+            </div>
         </main>
 
         <script>
             document.addEventListener('DOMContentLoaded', function () {
                 const cartItemsContainer = document.getElementById('cartItems');
                 const emptyCartMessage = document.querySelector('.empty-cart-message');
+                const orderNowButton = document.querySelector('.order-now');
                 let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
                 function toggleEmptyCartMessage() {
                     if (cartItems.length === 0) {
                         emptyCartMessage.style.display = 'block';
+                        orderNowButton.style.display = 'none';
                     } else {
                         emptyCartMessage.style.display = 'none';
+                        orderNowButton.style.display = 'block';
                     }
                 }
 
