@@ -1,0 +1,157 @@
+.wrapper {
+   justify-content: center ;
+   margin-top: 20px;
+   margin-left: 60px;
+}
+.main {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+}
+
+.row {
+   width: 900px;
+   height: 550px;
+   border-radius: 10px;
+   background: #fff;
+   box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0);
+}
+
+.side-image {
+   background-image: url("images/food2.avif");
+   background-position: right;
+   background-size: cover;
+   background-repeat: no-repeat;
+   position: relative;
+   border-radius: 0 10px 0 10px;
+}
+
+img {
+   width: 35px;
+   position: absolute;
+   top: 30px;
+   left: 30px;
+}
+
+.text {
+   position: absolute;
+   top: 20px;
+   left: 10%;
+}
+
+.text p {
+   color: #ffffff;
+   font-size: 40px;
+   text-align: left;
+
+}
+
+.text2 {
+   position: absolute;
+   bottom: 10px;
+   right: 10%;
+}
+
+.text2 p {
+   color: #ffffff;
+   font-size: 40px;
+   text-align: right;
+}
+
+.right {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+}
+
+.input-box {
+   width: 330px;
+   box-sizing: border-box;
+
+}
+
+.input-box header {
+   font-weight: 700;
+   text-align: center;
+   margin-bottom: 45px;
+}
+
+.input-field {
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   padding: 0 10px 0 10px;
+}
+
+.input {
+   height: 45px;
+   width: 100%;
+   background: transparent;
+   border: none;
+   border-bottom: 1px solid black;
+   outline: none;
+   margin-bottom: 30px;
+   color: #40414a;
+}
+
+.input-box .input-field label {
+   position: absolute;
+   top: 10px;
+   left: 10px;
+   pointer-events: none;
+   transition: .5s;
+}
+
+.input-field input:focus~label {
+   top: -10px;
+   font-size: 16px;
+}
+
+.input-field input:valid~label {
+   top: -10px;
+   font-size: 16px;
+   color: #5d5076;
+}
+
+.input-field input:valid,
+.input-field input:focus {
+   border-bottom: 1px solid #dc651c;
+}
+
+.submit {
+   border: none;
+   outline: none;
+   height: 45px;
+   color: white;
+   background-color: #dc651c;
+   border-radius: 10px;
+   transition: .4s;
+}
+
+.submit:hover {
+   background-color: #b44a07;
+   color: #ffffff;
+
+}
+
+.signin {
+
+   text-align: center;
+   font-size: small;
+   margin-top: 700;
+
+}
+
+span a {
+   text-decoration: none;
+   font-weight: 700;
+   color: #dc651c;
+   transition: .4s;
+}
+
+span a:hover {
+   color: #b44a07;
+   text-decoration: none;
+}
